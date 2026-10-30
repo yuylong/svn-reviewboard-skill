@@ -1,0 +1,21 @@
+# ReviewBoard + RBTools 配置模板
+# 用法：复制到 SVN 仓库根目录，改名为 .reviewboardrc（本 skill 的脚本与 rbt 都会读取）
+# 认证推荐：RB 网页右上角 My Account -> API Tokens 生成 token，填到 API_TOKEN
+
+REVIEWBOARD_URL = "https://reviewboard.example.com"
+
+# RB 后台登记的仓库（名称或 SVN 路径），必须与 RB 里的配置完全一致
+REPOSITORY = "my-repo"
+
+# ---- 认证：优先 API_TOKEN；两者都不配会失败 ----
+# API_TOKEN = "rbp_xxxxxxxxxxxxxxxxxxxxxxxx"
+# USERNAME = "your-username"
+# PASSWORD = "your-password"
+
+# ---- 默认评审对象（可选）----
+# TARGET_PEOPLE = ["alice", "bob"]
+# TARGET_GROUPS = ["my-team"]
+
+# ---- 其他可选 ----
+# BRANCH = "trunk"
+# DISABLE_SSL_VERIFICATION = True   # 仅内网自签名证书时临时使用
